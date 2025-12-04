@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            text-decoration: none;
+            list-style-type: none;
+            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .pertama {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        }
+
+        .pertama::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(../imgulangan/backgroundbagus.jpg);
+        background-repeat:  no-repeat ;
+        background-position: center;
+        background-size: cover;
+        filter: blur(5px);
+        z-index: -1; 
+        }
+
+        .pertama .content {
+            position: relative;
+            z-index: 1; 
+            
+        }
+
+
+        .atas{
+            color: aliceblue;
+            display: flex;
+            width: 100%;
+            height: 140px;
+            justify-content: end;
+            align-items: center;
+            
+        }
+
+        nav.pertama div.atas ul li a{
+            display: flex;
+            color: aliceblue;
+            
+            
+        }
+        nav.pertama div.atas ul li a:hover{
+            scale:1.3;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+        nav.pertama div.atas ul{
+            display: flex;
+            margin-right: 150px;
+            gap: 40px;
+            
+        }
+
+        .bawah{
+            margin-left: 140px;
+            margin-top: 70px;
+            width:80%;
+            height: 300px;
+        }
+
+        .satu{
+            color: aliceblue;
+            font-size: 390%;
+            font-weight: bold;
+        }
+        .kedua{
+            color: aliceblue;
+            font-size: 190%;
+            font-weight: bold;
+        }
+
+        .ketiga{
+            margin-top: 30px;
+            color: rgb(255, 255, 255);
+            font-size: 80%;
+            width: 50%;
+        }
+
+        .navkedua{
+            background: url(../imgulangan/bacgroijndabot.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .abot1{
+            color: aliceblue;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items:flex-end;
+            font-size: 210%;
+            width: 100%;
+            height: 15%;
+        }
+
+        .abot2{
+            display: flex;
+            width: 100%;
+            height: 85%;
+        }
+
+        .abotkiri{
+            color: aliceblue;
+            font-weight: 200;
+            font-size: 120%;
+            width: 40%;
+            height: 100%;
+            margin-left: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .abotkanan{
+            background: url(../imgulangan/camping-82.png);
+            background-repeat: no-repeat;
+            background-size: 80%;
+            background-position: center;
+            width: 50%;
+            height: 100%;
+            margin-left: 50px;
+        }
+
+        .navketiga{
+            background:url(../imgulangan/backgroundgununggelap.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: 100%;
+            height: 100vh;
+          
+        }
+
+        .navcontak{
+            color: aliceblue;
+            display: flex;
+            font-weight: bold;
+            font-size: 200%;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            height: 15%;
+            
+        }
+
+        .gambarcontak{ 
+            background: url(../imgulangan/sending-emails-93.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            margin-left: 100px;
+            margin-bottom: 50px;
+            width: 50%;
+        }
+
+        .kanancontak{
+            width: 66%;
+            height: 100%;
+            margin-left: 110px;
+        }
+        
+        .kotakbawahkontak{
+            display: flex;
+            width: 100%;
+            height: 85%;
+        }
+
+        .bacaankontak1{
+            margin-top: 50px;
+            color: aliceblue;
+            font-weight: 200;
+        }
+        .bacaankontak2{
+            width: 100%;
+            height: 30%;
+            font-size: 120%;
+            margin-top: 50px;
+            color: aliceblue;
+            font-weight: bold;
+            filter: drop-shadow(20px 20px 30px black);
+            
+        }
+
+        .service{
+            background: url(../imgulangan/backgroungunung.avif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .navservice{
+            color: aliceblue;
+            display: flex;
+            font-weight: bold;
+            font-size: 200%;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            height: 15%;
+        }
+
+        .kotakbawahservice{
+            width: 100%;
+            height: 85%;
+        }
+
+        .bacaanservice{
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            margin-top: 100px;
+        }
+
+        .gambarservice{
+            background: url(../imgulangan/camping-83.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30%;
+            width: 100%;
+            height: 500px;
+            
+            
+        }
+        
+        .returnhome{
+            position: fixed;
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: end;
+            
+
+
+        }
+        .lingkaran{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: azure;
+            border-radius: 100%;
+            width: 50px;
+            height: 50px;
+            margin-top: 30px;
+            margin-right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="kembali"></nav>
+    <nav id="homee"></nav>
+    <nav class="pertama">
+        <div class="atas">
+            <ul>
+                <li><a href="#homee">HOME</a></li>
+                <li><a href="#aboutt">ABOUT</a></li>
+                <li><a href="#servicee">SERVICE</a></li>
+                <li><a href="#contactt">CONTACT</a></li>
+                
+            </ul>
+        </div>
+        <div class="bawah">
+            <div class="satu">
+                EXPLORE
+            </div>
+            <div class="kedua">
+                THE WORLD
+            </div>
+            <div class="ketiga">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nihil consectetur quasi tempore vel vitae magnam perspiciatis, molestias aspernatur soluta quia totam facilis. Minus, iste voluptatum alias laudantium error molestiae vitae laboriosam ipsam vero at non obcaecati eos eum dolorem assumenda suscipit sit? Laudantium iure velit perferendis fugit, provident unde. Ad fuga nesciunt, nostrum officia harum sit magni perspiciatis quo excepturi cum? Sequi excepturi saepe, velit repellendus recusandae nemo animi. Necessitatibus, quod ullam. Eligendi enim a inventore maxime fuga vero natus architecto quo modi repellat? Necessitatibus eligendi sint iste, quo dolorem maxime nemo! Dolor ab alias, explicabo et tempore dolorem?
+            </div>
+        </div>
+        <nav class="returnhome">
+        <div class="lingkaran">
+            <a href="#kembali">🏠</a>
+        </div>
+    </nav>
+    </nav>
+    <nav id="aboutt"></nav>
+    <nav class="navkedua">
+        <div class="abot1">
+            ABOUT
+        </div>
+        <div class="abot2">
+            <div class="abotkiri">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas tenetur ullam aliquam repellendus dolorem beatae, quod quam animi perferendis, molestiae esse fugit! Beatae necessitatibus illum magnam quidem assumenda natus eligendi neque! Delectus est fugiat amet, iure nam sunt maxime eum rem quibusdam repellat atque. Labore, mollitia magnam ea nesciunt voluptates animi nam reprehenderit. Voluptatem vero nulla at autem, accusantium, iste tempora obcaecati laudantium aut quidem eaque neque sit id cumque adipisci culpa eos accusamus illo perspiciatis possimus non! Aliquid impedit, quod illo nesciunt nemo libero cum quas cupiditate animi doloribus dolorem totam quibusdam similique ipsum sint expedita. Quidem, magni laboriosam!
+            </div>
+            <div class="abotkanan">
+                
+            </div>
+        </div>
+    </nav>
+
+    <nav id="servicee"></nav>
+    <nav class="service">
+        <div class="navservice">
+            SERVICE
+        </div>
+        <div class="kotakbawahsevice">
+            <div class="bacaanservice">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Omnis, quis in. Consequuntur suscipit unde, cum iusto recusandae minus rem sit <br>et commodi nesciunt laborum ab nostrum facere animi dicta quod culpa! Ducimus, facere. Magnam sed aut,<br> iste sunt eveniet culpa nemo placeat quo perferendis dignissimos debitis<br> quod delectus libero, error laudantium eligendi aliquam odit, soluta labore veniam.<br> Ullam aperiam maxime possimus explicabo cum officiis iusto eligendi, doloribus, consequatur excepturi amet.
+
+            </div>
+            <div class="gambarservice">
+                
+            </div>
+        </div>
+    </nav>
+    <nav id="contactt"></nav>
+    <nav class="navketiga">
+        <div class="navcontak">
+             CONTACT
+        </div>
+        <div class="kotakbawahkontak">
+            <div class="gambarcontak">
+            
+            </div>
+            <div class="kanancontak">
+                <div class="bacaankontak1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas a minus blanditiis dolor repellat, sunt laudantium nisi reprehenderit quos velit?
+                </div>
+                <div class="bacaankontak2">
+                    📞 +62xxxxxxxxxxx<br><br>
+                    📧 raditgantengaw@gmail.com<br><br>
+                    📍 Bondowoso
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+
+</body>
+</html>
